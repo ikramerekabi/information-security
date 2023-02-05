@@ -14,6 +14,14 @@ def get_public():
 @route('/public')  
 def get_private():
     return 'This message should be shown to everyone!'
+@route('/login')  
+def get_login():
+    return 'It looks like you re logged in!'
+
+@route('/logout')  
+def get_logout():
+    return 'It looks like you re logged out!'
+
 
 if  'PYTHONANYWHERE_DOMAIN' in os.environ: 
     application = default_app()
